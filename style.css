@@ -1,0 +1,389 @@
+/* ================================
+   THEME & COLORS
+   ================================ */
+
+:root {
+    /* Primary accent (from the blue theme) */
+    --accent: #0284c7;
+    --accent-dark: #0369a1;
+    --accent-soft: #e0f2fe;
+
+    /* Alternative accent (from the teal theme) */
+    --accent-alt: #00adb5;
+    --accent-alt-dark: #008b91;
+
+    --ink: #111827;
+    --body-text: #555;
+    --dark: #111827;
+    --light: #f8f9ff;
+    --line: #e2e8f0;
+}
+
+/* ================================
+   BASIC SETTINGS
+   ================================ */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    /* keeps anchor targets clear of the sticky nav */
+    scroll-padding-top: 90px;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: var(--light);
+    color: var(--ink);
+    line-height: 1.6;
+}
+
+
+/* ================================
+   NAVIGATION
+   ================================ */
+
+nav {
+    background-color: var(--dark);
+    color: white;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 18px 8%;
+
+    position: sticky;
+    top: 0;
+
+    z-index: 1000;
+}
+
+nav h2 {
+    font-size: 24px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+
+    margin-left: 25px;
+
+    font-size: 16px;
+
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: var(--accent-alt);
+}
+
+
+/* ================================
+   HOME SECTION
+   ================================ */
+
+.home {
+    min-height: 90vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+
+    background: linear-gradient(
+        135deg,
+        var(--accent-soft),
+        #f8f9ff
+    );
+
+    padding: 50px 10%;
+}
+
+.home h1 {
+    font-size: 55px;
+    color: var(--ink);
+
+    margin-bottom: 10px;
+}
+
+.home h2 {
+    color: var(--accent-alt);
+
+    font-size: 28px;
+
+    margin-bottom: 20px;
+}
+
+.home p {
+    max-width: 650px;
+
+    margin: auto;
+
+    font-size: 18px;
+
+    color: var(--body-text);
+
+    margin-bottom: 30px;
+}
+
+
+/* ================================
+   BUTTONS
+   ================================ */
+
+.button {
+    display: inline-block;
+
+    background-color: var(--accent);
+    color: white;
+
+    padding: 13px 30px;
+
+    margin: 0 6px;
+
+    text-decoration: none;
+
+    border-radius: 30px;
+
+    font-weight: bold;
+
+    transition: 0.3s;
+}
+
+.button:hover {
+    background-color: var(--accent-dark);
+
+    transform: translateY(-3px);
+}
+
+/* alternative accent button */
+.button-alt {
+    background-color: var(--accent-alt);
+}
+
+.button-alt:hover {
+    background-color: var(--accent-alt-dark);
+}
+
+
+/* ================================
+   COMMON SECTIONS
+   ================================ */
+
+section {
+    padding: 80px 10%;
+
+    min-height: 50vh;
+
+    scroll-margin-top: 90px;
+}
+
+section h1 {
+    text-align: center;
+
+    font-size: 35px;
+
+    margin-bottom: 40px;
+
+    color: var(--ink);
+}
+
+
+/* ================================
+   ABOUT
+   ================================ */
+
+#about {
+    background-color: white;
+
+    text-align: center;
+}
+
+#about p {
+    max-width: 750px;
+
+    margin: 15px auto;
+
+    font-size: 17px;
+
+    color: var(--body-text);
+
+    line-height: 1.7;
+}
+
+
+/* ================================
+   SKILLS
+   ================================ */
+
+#skills {
+    background-color: var(--light);
+}
+
+.skills {
+    display: flex;
+
+    justify-content: center;
+
+    flex-wrap: wrap;
+
+    gap: 20px;
+}
+
+.skills div {
+    background-color: white;
+
+    padding: 18px 35px;
+
+    border-radius: 10px;
+
+    font-weight: bold;
+
+    color: var(--accent);
+
+    border: 1px solid var(--line);
+
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+
+    transition: 0.3s;
+}
+
+.skills div:hover {
+    transform: translateY(-5px);
+
+    background-color: var(--accent-alt);
+
+    color: white;
+}
+
+
+/* ================================
+   PROJECTS
+   ================================ */
+
+#projects {
+    background-color: var(--accent-soft);
+}
+
+.projects {
+    display: flex;
+
+    justify-content: center;
+
+    flex-wrap: wrap;
+
+    gap: 30px;
+}
+
+.card {
+    background-color: white;
+
+    width: 300px;
+
+    padding: 30px;
+
+    border-radius: 15px;
+
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+}
+
+.card h2 {
+    color: var(--accent);
+
+    margin-bottom: 15px;
+}
+
+.card p {
+    color: var(--body-text);
+
+    line-height: 1.7;
+}
+
+
+/* ================================
+   CONTACT
+   ================================ */
+
+#contact {
+    background-color: white;
+
+    text-align: center;
+}
+
+#contact p {
+    margin: 15px;
+
+    font-size: 17px;
+
+    color: var(--body-text);
+}
+
+
+/* ================================
+   FOOTER
+   ================================ */
+
+footer {
+    background-color: var(--dark);
+
+    color: white;
+
+    text-align: center;
+
+    padding: 25px;
+}
+
+
+/* ================================
+   MOBILE RESPONSIVE
+   ================================ */
+
+@media (max-width: 700px) {
+
+    nav {
+        flex-direction: column;
+
+        gap: 15px;
+
+        padding: 20px;
+    }
+
+    nav a {
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+
+    .home h1 {
+        font-size: 38px;
+    }
+
+    .home h2 {
+        font-size: 22px;
+    }
+
+    section {
+        padding: 60px 5%;
+    }
+
+    section h1 {
+        font-size: 30px;
+    }
+
+    .card {
+        width: 100%;
+    }
+}
